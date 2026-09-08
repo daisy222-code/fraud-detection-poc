@@ -1,0 +1,14 @@
+### Engine status
+GET http://localhost:8080/api/status
+
+### Submit four demo payments; expect two alerts
+POST http://localhost:8080/api/demo
+
+### View alerts after processing
+GET http://localhost:8080/api/alerts
+
+### Submit a custom USD payment (integer cents)
+POST http://localhost:8080/api/transactions
+Content-Type: application/json
+
+{"transactionId":"tx-001","accountId":"account-001","amountCents":1250000}
